@@ -1,0 +1,33 @@
+Index: target/linux/generic/patches-3.7/479-mtd_mp25p80_add_gd25q32_gd25q64.patch
+===================================================================
+--- target/linux/generic/patches-3.7/479-mtd_mp25p80_add_gd25q32_gd25q64.patch	(revision 0)
++++ target/linux/generic/patches-3.7/479-mtd_mp25p80_add_gd25q32_gd25q64.patch	(working copy)
+@@ -0,0 +1,13 @@
++--- a/drivers/mtd/devices/m25p80.c
+++++ b/drivers/mtd/devices/m25p80.c
++@@ -653,6 +653,10 @@
++ 	/* Everspin */
++ 	{ "mr25h256", CAT25_INFO(  32 * 1024, 1, 256, 2) },
++ 
+++	/* GigaDevice */
+++	{ "gd25q32", INFO(0xc84016, 0, 64 * 1024,  64, SECT_4K) },
+++	{ "gd25q64", INFO(0xc84017, 0, 64 * 1024, 128, SECT_4K) },
+++
++ 	/* Intel/Numonyx -- xxxs33b */
++ 	{ "160s33b",  INFO(0x898911, 0, 64 * 1024,  32, 0) },
++ 	{ "320s33b",  INFO(0x898912, 0, 64 * 1024,  64, 0) },
+Index: target/linux/generic/patches-3.7/480-mtd_mp25p80_add_pm25lq032.patch
+===================================================================
+--- target/linux/generic/patches-3.7/480-mtd_mp25p80_add_pm25lq032.patch	(revision 0)
++++ target/linux/generic/patches-3.7/480-mtd_mp25p80_add_pm25lq032.patch	(working copy)
+@@ -0,0 +1,10 @@
++--- a/drivers/mtd/devices/m25p80.c
+++++ b/drivers/mtd/devices/m25p80.c
++@@ -682,6 +682,7 @@
++ 	/* PMC -- pm25x "blocks" are 32K, sectors are 4K */
++ 	{ "pm25lv512", INFO(0, 0, 32 * 1024, 2, SECT_4K_PMC) },
++ 	{ "pm25lv010", INFO(0, 0, 32 * 1024, 4, SECT_4K_PMC) },
+++	{ "pm25lq032", INFO(0x7F9D46, 0, 64 * 1024,  64, SECT_4K) },
++ 
++ 	/* Spansion -- single (large) sector size only, at least
++ 	 * for the chips listed here (without boot sectors).
