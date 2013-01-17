@@ -45,7 +45,7 @@ Then proceed to build:
 
 ... where "x" is the number of CPU on your PC + 1.
 
-The first time you compile can take hours, since the toolchains is built first. Subsequent build only take a few minutes.
+The first time you compile can take hours, since the toolchains is built first. Subsequent builds only take a few minutes.
 
 Then copy the the resulting image to your TFTP server root, so you can Flash it from the router's U-Boot bootloader:
      cp bin/ramips/openwrt-ramips-rt305x-mpr-a1-squashfs-sysupgrade.bin /tftpboot/
