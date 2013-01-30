@@ -53,16 +53,14 @@ Then copy the the resulting image to your TFTP server root, so you can Flash it 
 
 ## Patch Contents
 
-### openwrt_add_gd25q32_gd25q64_pm25lq032_flash_support.patch
+### openwrt_add_pm25lq032_flash_support.patch
 
 This patch contains the definition of 3 SPI Flash chip that are commonly used in RT5350-based routers, but that are missing from the default OpenWrt MTD Flash device driver:
-* GigaDevice GD25Q32
-* GigaDevice GD25Q64
 * PMC PM25LQ032
 
 This patch is platform independent, as these definitions may also be useful to other non RT5350-based machines.
 
-### openwrt_add_rt3550_wlan_support.patch
+### openwrt_add_rt5350_wlan_support.patch
 
 This patch contains the changes required to add support for the RT5350 to the mac80211 driver.
 
