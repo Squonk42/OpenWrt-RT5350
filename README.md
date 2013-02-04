@@ -30,7 +30,7 @@ This is achieved using the following code snippet:
      git clone https://github.com/Squonk42/OpenWrt-RT5350.git
      cd trunk
      patch -p0 <../OpenWrt-RT5350/openwrt_add_pm25lq032_flash_support.patch
-     patch -p0 <../OpenWrt-RT5350/openwrt_add_rt3550_wlan_support.patch
+     patch -p0 <../OpenWrt-RT5350/openwrt_add_rt5350_wlan_support.patch
      patch -p0 <../OpenWrt-RT5350/openwrt_hame_mpr-a1.patch
      make menuconfig
 
