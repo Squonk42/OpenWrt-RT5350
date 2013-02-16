@@ -1,6 +1,6 @@
 Index: target/linux/ramips/files/arch/mips/ralink/rt305x/Kconfig
 ===================================================================
---- target/linux/ramips/files/arch/mips/ralink/rt305x/Kconfig	(revision 35471)
+--- target/linux/ramips/files/arch/mips/ralink/rt305x/Kconfig	(revision 35629)
 +++ target/linux/ramips/files/arch/mips/ralink/rt305x/Kconfig	(working copy)
 @@ -129,6 +129,11 @@
  	select RALINK_DEV_GPIO_BUTTONS
@@ -16,7 +16,7 @@ Index: target/linux/ramips/files/arch/mips/ralink/rt305x/Kconfig
  	select RALINK_DEV_GPIO_BUTTONS
 Index: target/linux/ramips/files/arch/mips/ralink/rt305x/Makefile
 ===================================================================
---- target/linux/ramips/files/arch/mips/ralink/rt305x/Makefile	(revision 35471)
+--- target/linux/ramips/files/arch/mips/ralink/rt305x/Makefile	(revision 35629)
 +++ target/linux/ramips/files/arch/mips/ralink/rt305x/Makefile	(working copy)
 @@ -31,6 +31,7 @@
  obj-$(CONFIG_RT305X_MACH_FREESTATION5)  += mach-freestation5.o
@@ -141,7 +141,7 @@ Index: target/linux/ramips/files/arch/mips/ralink/rt305x/mach-mpr-a1.c
 +             mpr_a1_init);
 Index: target/linux/ramips/files/arch/mips/include/asm/mach-ralink/machine.h
 ===================================================================
---- target/linux/ramips/files/arch/mips/include/asm/mach-ralink/machine.h	(revision 35471)
+--- target/linux/ramips/files/arch/mips/include/asm/mach-ralink/machine.h	(revision 35629)
 +++ target/linux/ramips/files/arch/mips/include/asm/mach-ralink/machine.h	(working copy)
 @@ -84,4 +84,5 @@
  
@@ -173,7 +173,7 @@ Index: target/linux/ramips/rt305x/profiles/hame.mk
 +$(eval $(call Profile,MPR_A1))
 Index: target/linux/ramips/rt305x/config-3.7
 ===================================================================
---- target/linux/ramips/rt305x/config-3.7	(revision 35471)
+--- target/linux/ramips/rt305x/config-3.7	(revision 35629)
 +++ target/linux/ramips/rt305x/config-3.7	(working copy)
 @@ -121,6 +121,7 @@
  CONFIG_RT305X_MACH_FREESTATION5=y
@@ -185,9 +185,9 @@ Index: target/linux/ramips/rt305x/config-3.7
  CONFIG_RT305X_MACH_NW718=y
 Index: target/linux/ramips/base-files/lib/preinit/06_set_iface_mac
 ===================================================================
---- target/linux/ramips/base-files/lib/preinit/06_set_iface_mac	(revision 35471)
+--- target/linux/ramips/base-files/lib/preinit/06_set_iface_mac	(revision 35629)
 +++ target/linux/ramips/base-files/lib/preinit/06_set_iface_mac	(working copy)
-@@ -21,6 +21,7 @@
+@@ -22,6 +22,7 @@
  	dir-620-a1 |\
  	esr-9753 |\
  	freestation5 |\
@@ -197,9 +197,9 @@ Index: target/linux/ramips/base-files/lib/preinit/06_set_iface_mac
  	rt-n56u |\
 Index: target/linux/ramips/base-files/lib/ramips.sh
 ===================================================================
---- target/linux/ramips/base-files/lib/ramips.sh	(revision 35471)
+--- target/linux/ramips/base-files/lib/ramips.sh	(revision 35629)
 +++ target/linux/ramips/base-files/lib/ramips.sh	(working copy)
-@@ -131,6 +131,9 @@
+@@ -94,6 +94,9 @@
  	*"MoFi Network MOFI3500-3GN")
  		name="mofi3500-3gn"
  		;;
@@ -211,7 +211,7 @@ Index: target/linux/ramips/base-files/lib/ramips.sh
  		;;
 Index: target/linux/ramips/base-files/lib/upgrade/platform.sh
 ===================================================================
---- target/linux/ramips/base-files/lib/upgrade/platform.sh	(revision 35471)
+--- target/linux/ramips/base-files/lib/upgrade/platform.sh	(revision 35629)
 +++ target/linux/ramips/base-files/lib/upgrade/platform.sh	(working copy)
 @@ -36,6 +36,7 @@
  	freestation5 | \
@@ -223,7 +223,7 @@ Index: target/linux/ramips/base-files/lib/upgrade/platform.sh
  	nw718 | \
 Index: target/linux/ramips/base-files/etc/hotplug.d/firmware/10-rt2x00-eeprom
 ===================================================================
---- target/linux/ramips/base-files/etc/hotplug.d/firmware/10-rt2x00-eeprom	(revision 35471)
+--- target/linux/ramips/base-files/etc/hotplug.d/firmware/10-rt2x00-eeprom	(revision 35629)
 +++ target/linux/ramips/base-files/etc/hotplug.d/firmware/10-rt2x00-eeprom	(working copy)
 @@ -71,6 +71,7 @@
  	freestation5 | \
@@ -235,7 +235,7 @@ Index: target/linux/ramips/base-files/etc/hotplug.d/firmware/10-rt2x00-eeprom
  	nw718 | \
 Index: target/linux/ramips/base-files/etc/uci-defaults/01_leds
 ===================================================================
---- target/linux/ramips/base-files/etc/uci-defaults/01_leds	(revision 35471)
+--- target/linux/ramips/base-files/etc/uci-defaults/01_leds	(revision 35629)
 +++ target/linux/ramips/base-files/etc/uci-defaults/01_leds	(working copy)
 @@ -81,6 +81,9 @@
  	mzk-w300nh2)
@@ -249,9 +249,9 @@ Index: target/linux/ramips/base-files/etc/uci-defaults/01_leds
  		;;
 Index: target/linux/ramips/base-files/etc/uci-defaults/02_network
 ===================================================================
---- target/linux/ramips/base-files/etc/uci-defaults/02_network	(revision 35471)
+--- target/linux/ramips/base-files/etc/uci-defaults/02_network	(revision 35629)
 +++ target/linux/ramips/base-files/etc/uci-defaults/02_network	(working copy)
-@@ -158,6 +158,7 @@
+@@ -153,6 +153,7 @@
  	br6425 | \
  	broadway | \
  	f5d8235-v1 | \
@@ -261,7 +261,7 @@ Index: target/linux/ramips/base-files/etc/uci-defaults/02_network
  	psr-680w | \
 Index: target/linux/ramips/base-files/etc/diag.sh
 ===================================================================
---- target/linux/ramips/base-files/etc/diag.sh	(revision 35471)
+--- target/linux/ramips/base-files/etc/diag.sh	(revision 35629)
 +++ target/linux/ramips/base-files/etc/diag.sh	(working copy)
 @@ -73,6 +73,9 @@
  	mofi3500-3gn)
@@ -275,7 +275,7 @@ Index: target/linux/ramips/base-files/etc/diag.sh
  		;;
 Index: target/linux/ramips/image/Makefile
 ===================================================================
---- target/linux/ramips/image/Makefile	(revision 35471)
+--- target/linux/ramips/image/Makefile	(revision 35629)
 +++ target/linux/ramips/image/Makefile	(working copy)
 @@ -555,6 +555,10 @@
  	$(call Image/Build/Template/$(fs_squash)/$(1),GENERIC_8M,mofi3500-3gn,MOFI3500-3GN,ttyS1,57600,phys)
