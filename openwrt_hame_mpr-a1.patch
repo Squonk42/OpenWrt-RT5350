@@ -49,7 +49,7 @@ Index: target/linux/ramips/files/arch/mips/ralink/rt305x/mach-mpr-a1.c
 +
 +#include <asm/mach-ralink/machine.h>
 +#include <asm/mach-ralink/dev-gpio-buttons.h>
-+#include <asm/mach-ralink/dev-gpio-leds.h>*/
++#include <asm/mach-ralink/dev-gpio-leds.h>
 +#include <asm/mach-ralink/rt305x.h>
 +#include <asm/mach-ralink/rt305x_regs.h>
 +
