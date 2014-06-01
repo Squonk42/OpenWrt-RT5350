@@ -3,7 +3,9 @@ OpenWrt-RT5350
 
 Patches to compile OpenWrt Linux on Ralink RT5350-based routers.
 
-__Note__ These patches only apply to kernel < 3.8.x. For more recent kernels, please visit our new repository at https://github.com/kaechele/openwrt!
+__Note__ These patches are no longer relevant, since they have been integrated into OpenWrt trunk since revision 37568 (https://dev.openwrt.org/changeset/37568/).
+
+These patches only apply to kernel < 3.8.x. For more recent kernels, please visit our new repository at https://github.com/kaechele/openwrt!
 
 ## Introduction
 
